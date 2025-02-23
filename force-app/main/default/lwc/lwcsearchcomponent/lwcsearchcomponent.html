@@ -1,0 +1,21 @@
+<!--
+  @File Name          : lwcsearchcomponent.html
+  @Description        : 
+  @Author             : Amit Singh (SFDCPanther)
+  @Group              : 
+  @Last Modified By   : Amit Singh
+  @Last Modified On   : 09-28-2020
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    5/31/2020   Amit Singh (SFDCPanther)     Initial Version
+-->
+<template>
+  <lightning-input
+    type="search"
+    value={searckKeyword}
+    onchange={handleChange}
+    label={searchLabel}
+    message-when-value-missing = "⚠️ A Value is required"
+  >
+  </lightning-input>
+</template>

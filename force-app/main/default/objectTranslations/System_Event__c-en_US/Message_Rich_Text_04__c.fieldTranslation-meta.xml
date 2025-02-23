@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Message Rich Text 04 --></label>
+    <name>Message_Rich_Text_04__c</name>
+</CustomFieldTranslation>

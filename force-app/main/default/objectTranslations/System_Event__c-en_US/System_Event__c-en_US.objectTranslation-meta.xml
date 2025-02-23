@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>System Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>System Events</value>
+    </caseValues>
+    <layouts>
+        <layout>System Event Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Email Details --></label>
+            <section>Email Details</section>
+        </sections>
+        <sections>
+            <label><!-- Error --></label>
+            <section>Error</section>
+        </sections>
+        <sections>
+            <label><!-- Integration Details --></label>
+            <section>Integration Details</section>
+        </sections>
+        <sections>
+            <label><!-- Message Details --></label>
+            <section>Message Details</section>
+        </sections>
+        <sections>
+            <label><!-- User Details --></label>
+            <section>User Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event - Speaker</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Event &amp; Speakers</value>
+    </caseValues>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Event_is_Not_Live_or_Has_been_Organized --></errorMessage>
+        <name>Event_is_Not_Live_or_Has_been_Organized</name>
+    </validationRules>
+</CustomObjectTranslation>

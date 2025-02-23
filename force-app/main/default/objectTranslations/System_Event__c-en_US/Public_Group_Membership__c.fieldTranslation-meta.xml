@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The list of all the public groups, that are associated with the user who has created the System Event Record. --></help>
+    <label><!-- Public Group Membership --></label>
+    <name>Public_Group_Membership__c</name>
+</CustomFieldTranslation>

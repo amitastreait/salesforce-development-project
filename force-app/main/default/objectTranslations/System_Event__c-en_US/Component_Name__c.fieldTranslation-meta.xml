@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The name of the Component Apex, Flow &amp; Process or any other --></help>
+    <label><!-- Component Name --></label>
+    <name>Component_Name__c</name>
+</CustomFieldTranslation>

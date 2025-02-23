@@ -1,0 +1,25 @@
+.pillSize{
+    width : 100%
+}
+
+
+lightning-radio-group .slds-radio_faux {
+    margin-right: 10px;
+}
+
+.slds-modal__content{
+    overflow: auto !important;
+}
+
+.lookup-container{
+    margin: inherit;
+}
+
+.disabled-overlay{
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 1;
+    position: absolute;
+    opacity: 0.09;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A rich-text message describing the nature of this event. This rich-text message can include HTML formatting, hyperlinks, etc. --></help>
+    <label><!-- Message Rich Text 02 --></label>
+    <name>Message_Rich_Text_02__c</name>
+</CustomFieldTranslation>

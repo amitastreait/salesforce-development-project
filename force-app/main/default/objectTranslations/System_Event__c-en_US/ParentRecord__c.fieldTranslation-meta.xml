@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This field stores the related record Id under which the System Event occurred. --></help>
+    <label><!-- Parent Record --></label>
+    <name>ParentRecord__c</name>
+</CustomFieldTranslation>

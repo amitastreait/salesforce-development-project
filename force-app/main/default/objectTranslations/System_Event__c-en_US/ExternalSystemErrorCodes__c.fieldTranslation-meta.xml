@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The link to Error Codes for the External System if Applicable otherwise leave as blank --></help>
+    <label><!-- External System Error Codes --></label>
+    <name>ExternalSystemErrorCodes__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,49 @@
+<!--
+    @File Name          : lookupdemol.html
+    @Description        :
+    @Author             : A Singh
+    @Group              :
+    @Last Modified By   : Amit Singh
+    @Last Modified On   : 12-29-2021
+    @Modification Log   :
+    Ver       Date            Author      		    Modification
+    1.0    6/7/2020   A Singh     Initial Version
+-->
+<template>
+    <lightning-card variant="Narrow" title="Lookup Demo" icon-name="standard:record">
+        <div class="slds-var-m-around_small">
+            <p>Search Component</p>
+            <c-search-component
+                onlookup={handleLookup}
+                fields-to-create={fieldsToCreate}
+                create-record=true
+                parent-a-p-i-name="ParentId"
+                obj-name="Account"
+                display-ields="Name, Rating, AccountNumber"
+                fields = {fields}
+                show-label=true
+                label-name="Account Name"
+                data-index={index}
+                index={index}>
+            </c-search-component>
+        </div>
+        <div class="slds-var-m-around_small">
+            <p>Lookup Component With Pre Selcted </p>
+            <c-search-component
+                onlookup={handleLookup}
+                fields-to-create={fieldsToCreate}
+                create-record=false
+                data-index={index}
+                parent-a-p-i-name="ParentId"
+                obj-name="Account"
+                display-ields="Name, Rating, AccountNumber"
+                show-label=true
+                label-name="Account Name"
+                fields = {fields}
+                value-id="001sdf4424"
+                value-name="Salesforce.org"
+                index={index}>
+            </c-search-component>
+        </div>
+    </lightning-card>
+</template>

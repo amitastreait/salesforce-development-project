@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Events</value>
+    </caseValues>
+    <layouts>
+        <layout>Event Layout</layout>
+        <sections>
+            <label><!-- Attendee Information --></label>
+            <section>Attendee Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Event Details --></label>
+            <section>Event Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- End Date must be  greater than Start Date/Time --></errorMessage>
+        <name>End_Date_must_be_Greater_than_Start_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not Select the Location if the Event is Virtual --></errorMessage>
+        <name>Must_Need_to_Select_Location_If_not_Virt</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must need to Select Frequency field for Recurring events --></errorMessage>
+        <name>Must_Select_Frequency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a location for In-Person Event --></errorMessage>
+        <name>Please_select_a_location_for_InPerson</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can Select Frequency for Non-Recurring Events --></errorMessage>
+        <name>You_can_Select_Frequency</name>
+    </validationRules>
+</CustomObjectTranslation>

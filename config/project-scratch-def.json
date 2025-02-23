@@ -1,0 +1,15 @@
+{
+  "orgName": "Acme Enterprises",
+  "edition": "Enterprise",
+  "features": ["Communities", "ServiceCloud","EnableSetPasswordInApi"],
+  "hasSampleData": true,
+  "username": "salesforceproject@pantherschools.com.02022025",
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    }
+  }
+}

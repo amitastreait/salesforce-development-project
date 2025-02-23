@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Timestamp when the email was sent --></help>
+    <label><!-- Email Sent DateTime --></label>
+    <name>Email_Sent_DateTime__c</name>
+</CustomFieldTranslation>

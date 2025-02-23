@@ -2,6 +2,21 @@
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
+## Pre-Requisites to Deploy
+
+To deploy the code you must to enable the following settings
+
+- Digital Experience must be enabled in the target org
+- After enabling the digital experience make sure "Enable ExperienceBundle Metadata API" setting is enabled under digital experience setting
+    - Setup -> Feature Settings -> Digital Experiences --> Settings
+
+## Deploy the Code base to the target org
+
+- Clone the github repo using `git clone `
+- Open the folder using VS Code
+- Connect VS code to the target org
+- run `sf project deploy start --manifest manifest/package.xml --target-org salesforcedevelopmentproject --wait 10 --ignore-conflicts` command to deploy the code to target org.
+
 ## How Do You Plan to Deploy Your Changes?
 
 Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).

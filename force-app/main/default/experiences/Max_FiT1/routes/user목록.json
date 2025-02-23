@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "1cc8d4b4-f111-4395-891d-a32bd90fa0b3",
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "configurationTags" : [ ],
+  "devName" : "list_005",
+  "id" : "57157a71-1017-45a6-a727-834fdcbb4421",
+  "label" : "User 목록",
+  "routeType" : "list-005",
+  "type" : "route",
+  "urlPrefix" : "profile"
+}

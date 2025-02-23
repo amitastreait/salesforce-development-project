@@ -1,0 +1,71 @@
+{
+  "defaultCode" : "en_US",
+  "defaultLabel" : "English (US)",
+  "id" : "d89558f1-afab-4fbc-8648-15f9b42a0021",
+  "languages" : [ {
+    "countryCode" : "NL",
+    "fallbackLanguageId" : null,
+    "id" : "51e6a394-ae91-4342-a1d4-faca6a48ea4c",
+    "isActive" : true,
+    "label" : "Dutch (NL)",
+    "languageCode" : "nl",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "e165f545-c5c1-456d-bfb5-d604bc9ce5bb",
+    "isActive" : true,
+    "label" : "French",
+    "languageCode" : "fr",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "6c999716-7358-4258-b484-2e8dac29c38b",
+    "isActive" : true,
+    "label" : "German",
+    "languageCode" : "de",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "dbd9864a-3f5a-4f29-a9fb-331e7761f972",
+    "isActive" : true,
+    "label" : "Hindi",
+    "languageCode" : "hi",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "e2f1f3b5-562a-4a8f-b8a9-d188950f004c",
+    "isActive" : true,
+    "label" : "Polish",
+    "languageCode" : "pl",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "8d1b4d5d-f653-4adb-bc18-a78e821a7005",
+    "isActive" : true,
+    "label" : "Russian",
+    "languageCode" : "ru",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "c8e57dfe-a0a5-4ed4-be24-2de3b5b1eed0",
+    "isActive" : true,
+    "label" : "Japanese",
+    "languageCode" : "ja",
+    "type" : "language"
+  }, {
+    "countryCode" : "",
+    "fallbackLanguageId" : null,
+    "id" : "1d069f55-a8fa-4ab8-82fb-54d281bbe6ea",
+    "isActive" : true,
+    "label" : "Italian",
+    "languageCode" : "it",
+    "type" : "language"
+  } ],
+  "type" : "languageContainer"
+}

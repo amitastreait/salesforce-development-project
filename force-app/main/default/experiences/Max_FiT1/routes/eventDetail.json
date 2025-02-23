@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "4cc5f2fe-b7c2-444c-afb5-e88f86274645",
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "configurationTags" : [ ],
+  "devName" : "Event_Detail__c",
+  "id" : "c4780264-127e-4c10-9881-fd6d5a7271cb",
+  "label" : "Event Detail",
+  "objectApiName" : "Event__c",
+  "routeType" : "detail-a0C",
+  "type" : "route",
+  "urlPrefix" : "event"
+}

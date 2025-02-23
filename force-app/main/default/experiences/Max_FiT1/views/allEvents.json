@@ -1,0 +1,79 @@
+{
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "0610b862-6b99-4724-bca1-3656f0eee5ef",
+  "label" : "All Events",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "A place where you can easily find all the events near your location",
+        "bannerTextWithKnowledge" : "",
+        "bannerTextWithoutKnowledge" : "",
+        "pageType" : "",
+        "showSubTopics" : false,
+        "title" : "Welcome!",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "42b2a657-0316-4434-9e68-db1f32423947",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.MAX_Fit3.1}\" /></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "1ed84ff2-c1ae-44c6-a6a6-77a5c15e0e6b",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "404a274a-6b7f-4d2e-9dcb-b34bb70049cf",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:eventListComponent",
+      "id" : "a2f6ad15-c849-4c4f-9b7c-455f063dd297",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7cbb52ae-780e-4a37-bfe8-7beecfc877c9",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:footerComponent",
+      "id" : "a71461b8-8fdf-438f-a769-b8768f0047b2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b43001ed-7e7f-4f49-84fa-891df2c0f6c1",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "All Events"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "832c2279-cdcc-4bf7-ba98-780699e0931f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e6e5ec1e-7556-4a2a-9230-28424cfb1374",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-all-events"
+}

@@ -43,3 +43,8 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+/LEAD_SOQL
+LEAD_SOQL.log
+log_analysis.py
+

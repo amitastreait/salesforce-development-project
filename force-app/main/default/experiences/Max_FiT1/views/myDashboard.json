@@ -1,0 +1,79 @@
+{
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "79ac45dd-1494-4e88-81ab-2afd669ebb31",
+  "label" : "My Dashboard",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "A place where you can see all about your activity at a glance",
+        "bannerTextWithKnowledge" : "",
+        "bannerTextWithoutKnowledge" : "",
+        "pageType" : "",
+        "showSubTopics" : false,
+        "title" : "Welcome!",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "82557b8b-33df-4694-9b7a-9a5feacf55ba",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.MAX_Fit3.1}\" /></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "0a2896db-58d2-483c-a6ad-ff0fb6cadcb7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "298b820e-6707-4a08-a305-528354f17ecf",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:eventDashboardComponent",
+      "id" : "42b96046-c5a8-44d7-bf24-59b272d64ca7",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "744c172f-6b0c-41b9-9566-ebb0e3e72423",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:footerComponent",
+      "id" : "8b1cf916-5d4f-4a88-9c6e-15ca2fdfb0f9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dcb9d029-794f-453d-909e-fc963957eaca",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "My Dashboard"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "62145e55-9556-4a98-95a9-82ec01089b6c",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "aeb99810-a48b-4e26-91f4-08f2052d9156",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-my-dashboard"
+}

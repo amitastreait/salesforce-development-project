@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "227108e5-a2dc-4169-8f90-cb09a6a89905",
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "configurationTags" : [ ],
+  "devName" : "relatedlist_00O",
+  "id" : "4c8d043d-5613-4c28-8b8d-48f256d613ae",
+  "label" : "Report 관련 목록",
+  "routeType" : "relatedlist-00O",
+  "type" : "route",
+  "urlPrefix" : "report"
+}

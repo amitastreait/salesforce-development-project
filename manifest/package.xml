@@ -5,6 +5,7 @@
 		<members>AWSS3_PutAttachments</members>
 		<members>AWSS3_PutDriver</members>
 		<members>AttendeeEventsService</members>
+		<members>ContactUsLWCService</members>
 		<members>ContentDocumentLinkTriggerDispatcher</members>
 		<members>ContentDocumentLinkTriggerHandler</members>
 		<members>ContentDocumentUnitTest</members>
@@ -12,6 +13,7 @@
 		<members>ContentNotesUtils</members>
 		<members>ContentVersionTriggerHandler</members>
 		<members>ContentVersionTriggerHelper</members>
+		<members>CustomSearchController</members>
 		<members>DeleteEventBatch</members>
 		<members>DeleteEventBatchTest</members>
 		<members>EventAttendeeTriggerHandler</members>
@@ -22,13 +24,12 @@
 		<members>EventListLWCService</members>
 		<members>EventManager</members>
 		<members>FooterComponentLWCService</members>
+		<members>LookupController</members>
 		<members>RsvpLWCService</members>
+		<members>SearchController</members>
 		<members>TransactionLogHandler</members>
 		<members>UserUtility</members>
-		<members>SearchController</members>
-		<members>LookupController</members>
-		<members>CustomSearchController</members>
-		<members>ContactUsLWCService</members>
+		<members>CommunitiesLandingController</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -93,6 +94,10 @@
 		<name>CustomTab</name>
 	</types>
 	<types>
+		<members>CommunitiesLanding</members>
+		<name>ApexPage</name>
+	</types>
+	<types>
 		<members>Attendee_Record_Page</members>
 		<members>Event_Record_Page</members>
 		<members>Event_Record_Page1</members>
@@ -117,6 +122,7 @@
 	<types>
 		<members>addEvent</members>
 		<members>attendeeEvents</members>
+		<members>contactUsComponent</members>
 		<members>customLogger</members>
 		<members>customlwclookup</members>
 		<members>eventDashboardComponent</members>
@@ -129,17 +135,29 @@
 		<members>lookupLwc</members>
 		<members>lookupdemol</members>
 		<members>lwcLookup</members>
+		<members>lwcrecordlist</members>
 		<members>lwcsearchcomponent</members>
 		<members>rsvpComponent</members>
-		<members>speakerTile</members>
-		<members>utils</members>
-		<members>lwcrecordlist</members>
 		<members>searchComponent</members>
 		<members>selectedRecord</members>
-		<members>contactUsComponent</members>
+		<members>speakerTile</members>
 		<members>stencilLwc</members>
+		<members>utils</members>
+		<members>contentManager</members>
 		<name>LightningComponentBundle</name>
 	</types>
+	<!-- <types>
+		<members>Max FiT</members>
+		<name>Network</name>
+	</types>
+	<types>
+		<members>Max_FiT1</members>
+		<name>ExperienceBundle</name>
+	</types>
+	<types>
+		<members>Max_FiT</members>
+		<name>CustomSite</name>
+	</types> -->
 	<types>
 		<members>Event_Management_Object_Permissions</members>
 		<name>PermissionSet</name>
@@ -151,9 +169,15 @@
 	</types>
 	<types>
 		<members>EventTitle</members>
-		<members>organizer</members>
+		<members>SNA_Max_FiT1_sf_default_cdn_9pQfZ</members>
 		<members>Speaker</members>
+		<members>organizer</members>
+		<members>JSZip</members>
 		<name>StaticResource</name>
+	</types>
+	<types>
+		<members>contentManagerAura</members>
+		<name>AuraDefinitionBundle</name>
 	</types>
 	<version>63.0</version>
 </Package>

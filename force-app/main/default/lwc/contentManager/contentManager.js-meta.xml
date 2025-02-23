@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Content Manager</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__UtilityBar</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <!-- Configuring the design attributes --><targetConfigs>
+        <targetConfig targets="lightning__RecordPage, lightningCommunity__Default">
+            <property name="title" type="String" label="Title" default="Content Manager" required="true"/>
+            <property name="recordId" type="String" default="recordId" label="Record Id" required="true"/>
+            <property name="showDetails" type="Boolean" default="true" label="Do you want to Show Details ?"/>
+            <property name="accept" type="String" default=".csv,.doc,.xsl,.pdf,.png,.jpg,.jpeg,.docx,.doc" label="User can upload the files in format?"/>
+            <property name="showsync" type="Boolean" default="true" label="User can sync the files from Salesforce?"/>
+            <property name="showFileUpload" type="Boolean" default="true" label="Do you want the users to upload a new file ?"/>
+            <property name="usedInCommunity" type="Boolean" default="false" label="Component is used in Community?"/>
+            <property name="showFilters" type="Boolean" default="true" label="Show Filters?"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,18 @@
+<design:component >
+    <!-- Add the All the Attribute which you wanted to expose to System Admin User to Setup the Component-->
+    <design:attribute name="title" label="Title" description="Title for the Component" />
+    <design:attribute name="recordId" label="Record Id"
+                        description="Record Id for the record. Use {!recordId} if the component is used in Community else leave blank" />
+    <design:attribute name="showDetails" label="Show Details" 
+                        description="if true shows the details in table format" />
+    <design:attribute name="showFileUpload" label="User can Upload File?" 
+                        description="User can Upload File." />
+    <design:attribute name="showsync" label="User can Sync file without page refresh?" 
+                        description="User can Sync file without page refresh." />
+    <design:attribute name="usedInCommunity" label="Component instanace is used in Community?" 
+                        description="Component instanace is used in Community?" />
+    <design:attribute name="showFilters" label="Show Filters" 
+                        description="Show Filters to the User?" />
+    <design:attribute name="accept" label="Valid file formats to be uploaded" 
+                        description="Valid file formats to be uploaded like .docx,.pdf" />
+</design:component>

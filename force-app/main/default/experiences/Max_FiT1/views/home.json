@@ -1,0 +1,89 @@
+{
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "componentName" : "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders" : [ ],
+  "id" : "3d0c3f45-0f08-4f7c-b96f-de02efad0dae",
+  "label" : "Home",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "bannerText" : "A place where you can easily find all the events related to your health fitness",
+        "bannerTextWithKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineArticles\">articles</a> and <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "bannerTextWithoutKnowledge" : "Explore other <a href=\"javascript:void(0)\" class=\"headlineDiscussions\">discussions</a> on this topic.",
+        "pageType" : "",
+        "showSubTopics" : true,
+        "title" : "Welcome!",
+        "uniqueNameOrId" : ""
+      },
+      "componentName" : "forceCommunity:headline",
+      "id" : "ecfc6d5c-8580-49b6-957b-e3dfeca29cad",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.MAX_Fit2.1}\" style=\"width: 1014.38px; height: 202.859px;\" /></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "dd51c6d9-72f6-42bb-9a28-b76a44f566e2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b5b09ce3-d960-43ca-a321-424eafc2feed",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "be41b825-4ffa-42a7-bd3e-4f9df9e19e1b",
+    "regionName" : "featured",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 26px;\">Event planning software handling everything from start to finish</span></p>\n<p><br /></p>\n<p><span style=\"color: rgb(0, 102, 204); font-size: 20px;\">Events are one of the best ways to reach and engage with prospects and customers in your entire marketing mix. Drive attendance, then capture and act on attendee interests.&nbsp;</span></p>\n<p><br /></p>\n<p><span style=\"color: rgb(0, 102, 204); font-size: 20px;\">Our event management system automates and simplifies the entire event planning process. Starting with sourcing your venue and ending with custom dashboards and reports after your event. We have everything covered.</span></p>\n<p><br /></p>\n<p><img class=\"sfdcCbImage\" src=\"{!contentAsset.X2.1}\" /></p>\n<p><br /></p>\n<p><span style=\"color: rgb(0, 102, 204); font-size: 20px;\">Maximise the revenue potential of your event program while simplifying the management of each stage of the event lifecycle. Our comprehensive platform is your one-stop shop for event success - from the smallest meetings to the largest conferences.</span></p>\n<p><br /></p>\n<p><span style=\"color: rgb(0, 102, 204); font-size: 20px;\">﻿</span><img class=\"sfdcCbImage\" src=\"{!contentAsset.X3.1}\" /></p>\n<p>&nbsp;</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "ecea3fd3-87a2-4a50-9b62-78fabc971e35",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f0ff22ba-014b-4766-b6eb-8d6fa2015c6c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c5d8ab6a-2940-4b29-b011-7393f5eabb32",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:footerComponent",
+      "id" : "60830ddf-c035-4ea1-94ba-29e6a5150d0f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9727e1d7-555f-4d42-abfc-86c9f99d345a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "8172803f-4c6a-4ec7-8187-a4cddc0f1f36",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "abcb131c-dcd9-4733-9791-9a20fed2276d",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "home"
+}

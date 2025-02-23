@@ -1,0 +1,54 @@
+<!--
+    @description       : 
+    @author            : Amit Singh
+    @group             : 
+    @last modified on  : 12-17-2020
+    @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+    Modifications Log 
+    Ver   Date         Author       Modification
+    1.0   12-17-2020   Amit Singh   Initial Version
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" >
+
+    <!-- Required Attributes -->
+    <aura:attribute name="title" type="String" access="public" default="Content Manager" />
+    <aura:attribute name="recordId" type="String" access="public" />
+    <aura:attribute name="isLoading" type="Boolean" default="false" />
+    <aura:attribute name="showDetails" type="Boolean" access="public" default="true" />
+    <aura:attribute name="showFileUpload" type="Boolean" access="public" default="true"  />
+    <aura:attribute name="showsync" type="Boolean" access="public" default="false"  />
+    <aura:attribute name="usedInCommunity" type="Boolean" access="public" default="false"  />
+    <aura:attribute name="showFilters" type="Boolean" access="public" default="true"  />
+    <aura:attribute name="accept" type="String" access="public" default=".csv,.doc,.xsl,.pdf,.png,.jpg,.jpeg,.docx,.doc"  />
+    
+    <!-- Load Required Script -->
+    <ltng:require scripts="{!join(',',
+                $Resource.JSZip  + '/FileSaver/jszip.js',
+                $Resource.JSZip  + '/FileSaver/FileSaver.js',
+                $Resource.JSZip  + '/FileSaver/FileSaver.min.js',
+                $Resource.JSZip  + '/FileSaver/jszip.min.js')}"
+        afterScriptsLoaded="{!c.scriptsLoaded}" 
+    />
+    
+    <aura:if isTrue="{!v.isLoading}">
+    	<lightning:spinner alternativeText="Loading" size="small" />
+    </aura:if>
+
+    <div class="slds-m-around_large">
+        <lightning:card>
+            <aura:set attribute="title">
+                <lightning:icon iconName="utility:connected_apps" size="small"/>
+                    {! v.title }
+            </aura:set>
+            <div class="slds-m-around_small" >
+                <lightning:button variant="brand-outline" label="Download All" title="Brand action" 
+                    onclick="{! c.handleDownload }" />
+                <c:contentManager aura:id="contentManager" title="{!v.title}" showDetails="{!v.showDetails}" 
+                    showFileUpload="{!v.showFileUpload}"   showsync="{!v.showsync}"
+                    recordId="{!v.recordId}" usedInCommunity="{!v.usedInCommunity}" 
+                    showFilters="{!v.showFilters}"   >
+                </c:contentManager>
+            </div>
+        </lightning:card>
+    </div>
+</aura:component>

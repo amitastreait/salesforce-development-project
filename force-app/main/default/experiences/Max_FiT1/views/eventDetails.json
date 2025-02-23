@@ -1,0 +1,67 @@
+{
+  "appPageId" : "ec994ed9-eee8-49e0-ada0-7bab4c9b2882",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "6243350f-dc80-43f2-ba21-4510577b436d",
+  "label" : "Event Details",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p style=\"text-align: center;\"><img class=\"sfdcCbImage\" src=\"{!contentAsset.MAX_Fit2.1}\" /></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "7c969762-b32d-49df-87d7-595880462d94",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "890f11c7-aa02-4a28-b08e-dde29d681038",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "eventId" : "{!eventId}",
+        "source" : "{!source}"
+      },
+      "componentName" : "c:eventDetailComponent",
+      "id" : "024c8357-5b61-4177-93ab-fa3ec45a0423",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "698d04f8-b72e-4502-ab92-6164be681078",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:footerComponent",
+      "id" : "7b0e571c-e487-4f67-8eac-7a169efc0bc4",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "d1cfcc54-ca49-4a68-a736-4eb8b99bc3c7",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Event Details"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "60695523-c831-4888-8177-5ade7b259137",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b285830d-bfdf-400d-9219-40cd7e9dc633",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-event-details"
+}

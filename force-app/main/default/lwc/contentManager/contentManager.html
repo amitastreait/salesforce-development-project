@@ -1,0 +1,71 @@
+<!--
+    @description       : 
+    @author            : Amit Singh
+    @group             : 
+    @last modified on  : 03-18-2021
+    @last modified by  : Amit Singh
+    Modifications Log 
+    Ver   Date         Author       Modification
+    1.0   11-26-2020   Amit Singh   Initial Version
+-->
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="small" variant="brand"></lightning-spinner>
+    </template>
+    <lightning-button if:true={showsync} variant="brand" title="Content Sync" icon-name="utility:sync"
+        onclick={handleSync} slot="actions" >
+    </lightning-button>
+    <lightning-button slot="actions" if:true={showFileUpload} variant="brand" label="Upload" title="Upload" onclick={handleModal}>
+    </lightning-button>
+
+    <div class="custom-modal" if:true={showModal} >
+        <section role="dialog" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Upload File</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <p>Please provide the valid description about the file before you upload</p>
+                    <lightning-textarea onchange={handleChangeText} value={description} ></lightning-textarea>
+                    <lightning-file-upload  if:true={showFileUpload}
+                        label="Upload New File"
+                        name="fileUploader"
+                        accept={accept}
+                        record-id={recordId}
+                        disabled={disabled}
+                        onuploadfinished={handleUploadFinished}
+                        multiple>
+                    </lightning-file-upload>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button onclick={closeModal} label="Cancel" title="Cancel" class="slds-m-right_small"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+
+    <div >
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4" if:true={showFilters}>
+                <lightning-input if:true={showFilters} type="search" variant="standard" 
+                    name="Search" label="Search" onchange={handleSearch} >
+                </lightning-input>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slds-var-p-top_small">
+        <lightning-datatable
+            key-field="id"
+            data={_filteredRecord}
+            hide-checkbox-column
+            columns={columnsList}
+            onsort={onHandleSort}
+            default-sort-direction={defaultSortDirection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+    </div>
+</template>

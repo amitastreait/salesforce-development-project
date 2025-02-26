@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razorpay_Refund_Transaction_Compact_layout</fullName>
+    <fields>Transaction_ID__c</fields>
+    <fields>Parent_Payment__c</fields>
+    <fields>Status__c</fields>
+    <fields>Amount__c</fields>
+    <fields>Transaction_Date__c</fields>
+    <fields>Event_Registration__c</fields>
+    <fields>Payment_Method__c</fields>
+    <fields>RefundReason__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>RefundType__c</fields>
+    <label>Razorpay Refund Transaction Compact layout</label>
+</CompactLayout>

@@ -15,6 +15,42 @@
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Event Management</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Razorpay_Payment_Transaction_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>RazorpayPaymentTransaction__c</pageOrSobjectType>
+        <recordType>RazorpayPaymentTransaction__c.Refund</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Razorpay_Payment_Transaction_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>RazorpayPaymentTransaction__c</pageOrSobjectType>
+        <recordType>RazorpayPaymentTransaction__c.Refund</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Razorpay_Payment_Transaction_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>RazorpayPaymentTransaction__c</pageOrSobjectType>
+        <recordType>RazorpayPaymentTransaction__c.Payment</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Razorpay_Payment_Transaction_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>RazorpayPaymentTransaction__c</pageOrSobjectType>
+        <recordType>RazorpayPaymentTransaction__c.Payment</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>Event__c</tabs>
     <tabs>Speaker__c</tabs>
     <tabs>EventSpeakers__c</tabs>
@@ -25,6 +61,8 @@
     <tabs>Error_Log__c</tabs>
     <tabs>standard-report</tabs>
     <tabs>FooterContent__c</tabs>
-    <tabs>standard-DeleteEvent</tabs>
+    <tabs>RazorpayPaymentTransaction__c</tabs>
+    <tabs>Project__c</tabs>
+    <tabs>SystemLog__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

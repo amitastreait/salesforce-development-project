@@ -2,12 +2,16 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>Event Attendee</value>
+        <value>Event Registration</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Event Attendees</value>
+        <value>Event Registrations</value>
     </caseValues>
+    <quickActions>
+        <label><!-- Update Event Registration --></label>
+        <name>Update_Event_Registration</name>
+    </quickActions>
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage><!-- Event is Not Accepting Registrations --></errorMessage>

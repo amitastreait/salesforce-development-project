@@ -1,0 +1,54 @@
+<!-- csvExporter.html -->
+<template>
+    <lightning-card title="CSV Export Tool" icon-name="utility:download">
+        <div class="slds-p-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col" if:true={showFieldSelect}>
+                    <lightning-button 
+                        label="Select Fields" 
+                        onclick={toggleFieldSelector} 
+                        class="slds-m-bottom_small">
+                    </lightning-button>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        label="Export to CSV" 
+                        variant="brand" 
+                        onclick={exportCSV} >
+                    </lightning-button>
+                </div>
+            </div>
+
+            <!-- Field Selector -->
+            <template if:true={showFieldSelector}>
+                <div class="slds-m-top_medium">
+                    <lightning-dual-listbox
+                        label="Select Fields to Export"
+                        source-label="Available Fields"
+                        selected-label="Selected Fields"
+                        options={availableFields}
+                        value={selectedFields}
+                        onchange={handleFieldSelection}>
+                    </lightning-dual-listbox>
+                </div>
+            </template>
+
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <div class="slds-is-relative slds-m-top_medium">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                    <div class="slds-text-align_center slds-m-top_medium">
+                        Processing records: {recordsProcessed} / {maxRecords}
+                    </div>
+                </div>
+            </template>
+
+            <!-- Error Display -->
+            <template if:true={error}>
+                <div class="slds-m-top_small slds-text-color_error">
+                    {error}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

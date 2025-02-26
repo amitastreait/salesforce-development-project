@@ -30,6 +30,8 @@
 		<members>TransactionLogHandler</members>
 		<members>UserUtility</members>
 		<members>CommunitiesLandingController</members>
+		<members>CSVExporterController</members>
+		<members>CSVExporterControllerTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -68,6 +70,9 @@
 		<members>Location__c</members>
 		<members>Speaker__c</members>
 		<members>System_Event__c</members>
+		<members>RazorpayPaymentTransaction__c</members>
+		<members>SystemLog__c</members>
+		<members>Project__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -91,6 +96,9 @@
 		<members>Location__c</members>
 		<members>Speaker__c</members>
 		<members>System_Event__c</members>
+		<members>RazorpayPaymentTransaction__c</members>
+		<members>SystemLog__c</members>
+		<members>Project__c</members>
 		<name>CustomTab</name>
 	</types>
 	<types>
@@ -104,6 +112,8 @@
 		<members>Event_Speaker_Record_Page</members>
 		<members>Speaker_Record_Page</members>
 		<members>System_Event_Record_Page</members>
+		<members>Razorpay_Payment_Transaction_Record_Page</members>
+		<members>Razorpay_Payment_Transaction_Record_Page1</members>
 		<name>FlexiPage</name>
 	</types>
 	<types>
@@ -111,12 +121,15 @@
 		<name>GlobalValueSet</name>
 	</types>
 	<types>
-		<members>Event-Event Layout</members>
 		<members>EventSpeakers__c-Event - Speaker Layout</members>
 		<members>Event_Attendee__c-Event Attendee Layout</members>
 		<members>Event_Organizer__c-Event Organizer Layout</members>
 		<members>Event__c-Event Layout</members>
 		<members>System_Event__c-System Event Layout</members>
+		<members>RazorpayPaymentTransaction__c-Razorpay Payment Transaction Layout</members>
+		<members>RazorpayPaymentTransaction__c-Razorpay Refund Transaction Layout</members>
+		<members>Project__c-Project Layout</members>
+		<members>Location__c-Location Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
@@ -144,6 +157,7 @@
 		<members>stencilLwc</members>
 		<members>utils</members>
 		<members>contentManager</members>
+		<members>csvExporter</members>
 		<name>LightningComponentBundle</name>
 	</types>
 	<!-- <types>
@@ -165,6 +179,8 @@
 	<types>
 		<members>Event_Organizer__c.Update_Record</members>
 		<members>Location__c.Update_Location</members>
+		<members>Event_Attendee__c.Update_Event_Registration</members>
+		<members>RazorpayPaymentTransaction__c.Update_Razorpay_Payment_Transaction</members>
 		<name>QuickAction</name>
 	</types>
 	<types>

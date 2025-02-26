@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProcessorName__c</fullName>
+    <description>Payment gateway/processor used</description>
+    <inlineHelpText>Payment processor used</inlineHelpText>
+    <label>Processor Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stripe</fullName>
+                <default>false</default>
+                <label>Stripe</label>
+            </value>
+            <value>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+                <label>PayPal</label>
+            </value>
+            <value>
+                <fullName>RazorPay</fullName>
+                <default>false</default>
+                <label>RazorPay</label>
+            </value>
+            <value>
+                <fullName>Square</fullName>
+                <default>false</default>
+                <label>Square</label>
+            </value>
+            <value>
+                <fullName>Authorize.Net</fullName>
+                <default>false</default>
+                <label>Authorize.Net</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

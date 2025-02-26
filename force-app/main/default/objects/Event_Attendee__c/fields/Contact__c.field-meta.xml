@@ -4,7 +4,6 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <label>Contact</label>
     <referenceTo>Contact</referenceTo>
-    <relationshipLabel>Event Attendees</relationshipLabel>
     <relationshipName>Event_Attendees</relationshipName>
     <required>false</required>
     <trackTrending>false</trackTrending>

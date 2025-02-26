@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Payment_Records</fullName>
+    <columns>NAME</columns>
+    <columns>Original_Amount__c</columns>
+    <columns>RemainingAmount__c</columns>
+    <columns>Event_Registration__c</columns>
+    <columns>Transaction_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>TotalRefundedAmount__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>RazorpayPaymentTransaction__c.Payment</value>
+    </filters>
+    <label>All Payment Records</label>
+</ListView>

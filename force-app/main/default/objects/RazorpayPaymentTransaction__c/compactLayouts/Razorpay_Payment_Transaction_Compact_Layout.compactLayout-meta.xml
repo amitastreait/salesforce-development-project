@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Razorpay_Payment_Transaction_Compact_Layout</fullName>
+    <fields>Transaction_ID__c</fields>
+    <fields>Status__c</fields>
+    <fields>Original_Amount__c</fields>
+    <fields>Amount__c</fields>
+    <fields>Transaction_Date__c</fields>
+    <fields>Event_Registration__c</fields>
+    <fields>ProcessorName__c</fields>
+    <fields>Payment_Method__c</fields>
+    <label>Razorpay Payment Transaction Compact Layout</label>
+</CompactLayout>

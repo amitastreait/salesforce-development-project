@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Payment__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Required for refunds - links to the original payment</description>
+    <inlineHelpText>Reference to the original payment</inlineHelpText>
+    <label>Parent Payment</label>
+    <referenceTo>RazorpayPaymentTransaction__c</referenceTo>
+    <relationshipLabel>Related Refund Records</relationshipLabel>
+    <relationshipName>RelatedRefunds</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

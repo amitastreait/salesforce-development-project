@@ -3,7 +3,6 @@
     <fullName>Attendee__c</fullName>
     <label>Attendee</label>
     <referenceTo>Attendee__c</referenceTo>
-    <relationshipLabel>Event Attendees</relationshipLabel>
     <relationshipName>Event_Attendees</relationshipName>
     <relationshipOrder>1</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>

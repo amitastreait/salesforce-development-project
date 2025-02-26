@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllRefundRecords</fullName>
+    <columns>NAME</columns>
+    <columns>Original_Amount__c</columns>
+    <columns>Transaction_ID__c</columns>
+    <columns>Transaction_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>RefundReason__c</columns>
+    <columns>RefundType__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>RazorpayPaymentTransaction__c.Refund</value>
+    </filters>
+    <label>All Refund Records</label>
+</ListView>

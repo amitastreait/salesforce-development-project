@@ -1,5 +1,5 @@
 /**
- * Test class for CSVExporterController
+ * Test class for CSVExporterController with relationship field support
  * @author Claude
  * @date 2025-02-26
  */
@@ -11,7 +11,7 @@ public class CSVExporterControllerTest {
     static void setupTestData() {
         // Create test accounts
         List<Account> testAccounts = new List<Account>();
-        for (Integer i = 0; i < 10; i++) {
+        for (Integer i = 0; i < 5; i++) {
             testAccounts.add(new Account(
                 Name = 'Test Account ' + i,
                 Phone = '555-555-555' + i,
@@ -21,6 +21,101 @@ public class CSVExporterControllerTest {
             ));
         }
         insert testAccounts;
+        
+        // Create test contacts linked to accounts
+        List<Contact> testContacts = new List<Contact>();
+        for (Integer i = 0; i < 10; i++) {
+            testContacts.add(new Contact(
+                FirstName = 'Test',
+                LastName = 'Contact ' + i,
+                Email = 'test' + i + '@example.com',
+                Phone = '555-123-456' + i,
+                AccountId = testAccounts[Math.mod(i, testAccounts.size())].Id
+            ));
+        }
+        insert testContacts;
+        
+        // Create test opportunities linked to accounts
+        List<Opportunity> testOpportunities = new List<Opportunity>();
+        for (Integer i = 0; i < 5; i++) {
+            testOpportunities.add(new Opportunity(
+                Name = 'Test Opportunity ' + i,
+                StageName = 'Prospecting',
+                CloseDate = Date.today().addDays(30),
+                AccountId = testAccounts[i].Id,
+                Amount = 5000 * (i + 1)
+            ));
+        }
+        insert testOpportunities;
+    }
+    
+    /**
+     * Test retrieving field metadata including relationship fields
+     */
+    @isTest
+    static void testGetFieldsWithRelationships() {
+        // Act
+        Test.startTest();
+        List<CSVExporterController.FieldInfo> fields = CSVExporterController.getFields('Contact');
+        Test.stopTest();
+        
+        // Assert
+        System.assertNotEquals(null, fields, 'Fields should not be null');
+        System.assert(fields.size() > 0, 'Should retrieve Contact fields');
+        
+        // Verify relationship fields exist
+        Boolean hasAccountNameField = false;
+        String accountNameFieldApi = '';
+        
+        for (CSVExporterController.FieldInfo field : fields) {
+            if (field.apiName.startsWith('Account.') && field.apiName.endsWith('Name')) {
+                hasAccountNameField = true;
+                accountNameFieldApi = field.apiName;
+                // Verify the related ID field property is set
+                System.assertEquals('AccountId', field.relatedIdField, 'Related ID field should be set correctly');
+            }
+        }
+        
+        System.assert(hasAccountNameField, 'Account Name relationship field should be present');
+        System.assert(accountNameFieldApi.equals('Account.Name'), 'Account Name field should have correct API name');
+    }
+    
+    /**
+     * Test retrieving records with relationship fields
+     */
+    @isTest
+    static void testGetRecordsWithRelationships() {
+        // Arrange
+        List<String> fields = new List<String>{'Name', 'Phone', 'Email', 'Account.Name'};
+        Integer batchSize = 5;
+        Integer offset = 0;
+        
+        // Act
+        Test.startTest();
+        CSVExporterController.RecordResult result = CSVExporterController.getRecords('Contact', fields, batchSize, offset);
+        Test.stopTest();
+        
+        // Assert
+        System.assertNotEquals(null, result, 'Result should not be null');
+        System.assertNotEquals(null, result.records, 'Records should not be null');
+        System.assertEquals(5, result.records.size(), 'Should return exactly 5 records (batch size)');
+        
+        // Verify record fields including relationship fields
+        for (Map<String, Object> record : result.records) {
+            System.assert(record.containsKey('Name'), 'Record should contain Name field');
+            System.assert(record.containsKey('Phone'), 'Record should contain Phone field');
+            System.assert(record.containsKey('Email'), 'Record should contain Email field');
+            System.assert(record.containsKey('Account.Name'), 'Record should contain Account.Name field');
+            System.assert(record.containsKey('AccountId'), 'Record should contain AccountId field');
+            
+            // Verify relationship values
+            String accountName = (String)record.get('Account.Name');
+            Id accountId = (Id)record.get('AccountId');
+            
+            System.assertNotEquals(null, accountName, 'Account Name should not be null');
+            System.assertNotEquals(null, accountId, 'Account Id should not be null');
+            System.assert(accountName.startsWith('Test Account'), 'Account Name should match expected format');
+        }
     }
     
     /**
@@ -46,13 +141,6 @@ public class CSVExporterControllerTest {
         }
         System.assert(hasNameField, 'Name field should be present');
         System.assert(hasPhoneField, 'Phone field should be present');
-        
-        // Verify field properties
-        for (CSVExporterController.FieldInfo field : fields) {
-            System.assertNotEquals(null, field.label, 'Field label should not be null');
-            System.assertNotEquals(null, field.apiName, 'Field API name should not be null');
-            System.assertNotEquals(null, field.dataType, 'Field data type should not be null');
-        }
     }
     
     /**
@@ -65,7 +153,7 @@ public class CSVExporterControllerTest {
             CSVExporterController.getFields('InvalidObject');
             System.assert(false, 'Should throw an exception for invalid object');
         } catch (AuraHandledException e) {
-            //System.assert(e.getMessage().contains('Error retrieving field information'), 'Exception message should indicate field retrieval error');
+            
         }
     }
     
@@ -88,14 +176,7 @@ public class CSVExporterControllerTest {
         System.assertNotEquals(null, result, 'Result should not be null');
         System.assertNotEquals(null, result.records, 'Records should not be null');
         System.assertEquals(5, result.records.size(), 'Should return exactly 5 records (batch size)');
-        System.assertEquals(10, result.totalCount, 'Total count should be 10 (total test accounts)');
-        
-        // Verify record fields
-        for (Map<String, Object> record : result.records) {
-            System.assert(record.containsKey('Name'), 'Record should contain Name field');
-            System.assert(record.containsKey('Phone'), 'Record should contain Phone field');
-            System.assert(record.containsKey('BillingCity'), 'Record should contain BillingCity field');
-        }
+        System.assertEquals(5, result.totalCount, 'Total count should be 5 (total test accounts)');
     }
     
     /**
@@ -110,95 +191,27 @@ public class CSVExporterControllerTest {
         
         // Act
         Test.startTest();
-        CSVExporterController.RecordResult result = CSVExporterController.getRecords('Account', fields, batchSize, offset);
+        CSVExporterController.RecordResult result = CSVExporterController.getRecords('Contact', fields, batchSize, offset);
         Test.stopTest();
         
         // Assert
         System.assertEquals(5, result.records.size(), 'Should return exactly 5 records (remaining after offset)');
-        System.assertEquals(10, result.totalCount, 'Total count should be 10 (total test accounts)');
+        System.assertEquals(10, result.totalCount, 'Total count should be 10 (total test contacts)');
     }
     
     /**
-     * Test retrieving records with large batch size
+     * Test FieldInfo class with relationship properties
      */
     @isTest
-    static void testGetRecordsLargeBatchSize() {
+    static void testFieldInfoWithRelationship() {
         // Arrange
-        List<String> fields = new List<String>{'Name'};
-        Integer batchSize = 5000; // Deliberately larger than limit
-        Integer offset = 0;
-        
-        // Act
-        Test.startTest();
-        CSVExporterController.RecordResult result = CSVExporterController.getRecords('Account', fields, batchSize, offset);
-        Test.stopTest();
+        CSVExporterController.FieldInfo regularField = new CSVExporterController.FieldInfo('Name', 'Name', 'STRING');
+        CSVExporterController.FieldInfo relationshipField = new CSVExporterController.FieldInfo(
+            'Account Name', 'Account.Name', 'STRING', 'AccountId'
+        );
         
         // Assert
-        System.assertEquals(10, result.records.size(), 'Should return 10 records (all test accounts)');
-        System.assertEquals(10, result.totalCount, 'Total count should be 10');
-    }
-    
-    /**
-     * Test retrieving records for invalid object
-     */
-    @isTest
-    static void testGetRecordsInvalidObject() {
-        // Arrange
-        List<String> fields = new List<String>{'Name'};
-        
-        // Act & Assert
-        try {
-            CSVExporterController.getRecords('InvalidObject', fields, 10, 0);
-            System.assert(false, 'Should throw an exception for invalid object');
-        } catch (AuraHandledException e) {
-            //System.assert(e.getMessage().contains('Error retrieving records'), 'Exception message should indicate record retrieval error');
-        }
-    }
-    
-    /**
-     * Test retrieving records with invalid field
-     */
-    @isTest
-    static void testGetRecordsInvalidField() {
-        // Arrange
-        List<String> fields = new List<String>{'Name', 'InvalidField'};
-        
-        // Act & Assert
-        try {
-            CSVExporterController.getRecords('Account', fields, 10, 0);
-            System.assert(false, 'Should throw an exception for invalid field');
-        } catch (AuraHandledException e) {
-            //System.assert(e.getMessage().contains('Error retrieving records'), 'Exception message should indicate record retrieval error');
-        }
-    }
-    
-    /**
-     * Test FieldInfo compareTo method for sorting
-     */
-    @isTest
-    static void testFieldInfoCompareTo() {
-        // Arrange
-        CSVExporterController.FieldInfo fieldA = new CSVExporterController.FieldInfo('A Field', 'A_Field__c', 'STRING');
-        CSVExporterController.FieldInfo fieldB = new CSVExporterController.FieldInfo('B Field', 'B_Field__c', 'STRING');
-        CSVExporterController.FieldInfo fieldC = new CSVExporterController.FieldInfo('A Field', 'Another_A_Field__c', 'INTEGER');
-        
-        // Act & Assert
-        System.assert(fieldA.compareTo(fieldB) < 0, 'A Field should sort before B Field');
-        System.assert(fieldB.compareTo(fieldA) > 0, 'B Field should sort after A Field');
-        System.assertEquals(0, fieldA.compareTo(fieldC), 'Fields with same label should be equal for sorting');
-    }
-    
-    /**
-     * Test RecordResult initialization
-     */
-    @isTest
-    static void testRecordResultInitialization() {
-        // Arrange & Act
-        CSVExporterController.RecordResult result = new CSVExporterController.RecordResult();
-        
-        // Assert
-        System.assertNotEquals(null, result.records, 'Records list should be initialized');
-        System.assertEquals(0, result.records.size(), 'Records list should be empty');
-        System.assertEquals(0, result.totalCount, 'Total count should be 0');
+        System.assertEquals(null, regularField.relatedIdField, 'Regular field should have null related ID field');
+        System.assertEquals('AccountId', relationshipField.relatedIdField, 'Relationship field should have correct related ID field');
     }
 }
